@@ -1,5 +1,5 @@
 {
-  "name": "component-library-react",
+  "name": "core-component-test-react",
   "sideEffects": false,
   "version": "0.0.1",
   "private": true,
@@ -10,13 +10,12 @@
   },
   "scripts": {
     "build": "npm run clean && npm run compile",
-    "clean": "rm -rf dist",
+    "clean": "rimraf -rf dist",
     "compile": "npm run tsc",
     "tsc": "tsc -p .",
     "rollup": "rollup -c"
   },
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.es.js",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist/"
@@ -31,10 +30,13 @@
     "np": "^3.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "rimraf": "^3.0.2",
     "typescript": "^3.3.4000"
   },
   "dependencies": {
-    "component-library": "^0.0.1"
+    "@stencil/core": "^1.17.3",
+    "core-component-test": "file:../core-component-test",
+    "rollup": "^2.23.0"
   },
   "peerDependencies": {
     "react": "^16.7.0",
